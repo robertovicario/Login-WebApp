@@ -1,0 +1,16 @@
+<!-- Template -->
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %}Home - WebApp{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<div class="p-4">
+    <h1 class="mb-2">{{ heading }}</h1>
+    <nav>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/home">Home</a></li>
+    </nav>
+</div>
+{% endblock %}

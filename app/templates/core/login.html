@@ -1,0 +1,58 @@
+<!-- Template -->
+{% extends 'base.html' %}
+
+<!-- Title -->
+{% block title %}Login - WebApp{% endblock %}
+
+<!-- Styles -->
+{% block styles %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/pages/login.css') }}">
+{% endblock %}
+
+<!-- Content -->
+{% block content %}
+<section class="d-flex justify-content-center align-items-center w-100 vh-100">
+    <div class="container">
+        <div class="row d-md-flex justify-content-md-center align-items-md-center">
+            <div class="col-md-12 d-md-flex flex-column justify-content-md-center align-items-md-center">
+
+                <!-- Card -->
+                <div class="d-flex flex-column justify-content-center align-items-center w-auto p-5 bg-body border border-1 rounded-3">
+
+                    <!-- Icon -->
+                    <div class="d-flex justify-content-center align-items-center mb-5 bg-primary rounded-3 login-profile">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-person-fill text-white login-profile-icon">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="d-flex flex-column justify-content-center align-items-start">
+
+                        <!-- Username -->
+                        <input class="form-control form-control-lg mb-3" type="text" id="input-username" name="Username" placeholder="Username" required="">
+                        
+                        <!-- Password -->
+                        <input class="form-control form-control-lg mb-4" type="password" id="input-password" name="Password" placeholder="Password" required="">
+                        
+                        <!-- Remember me -->
+                        <div class="form-check mb-4 login-checkbox">
+                            <input class="form-check-input" type="checkbox" id="formCheck-1">
+                            <label class="form-check-label" for="formCheck-1">Remember me</label>
+                        </div>
+
+                        <!-- Sign-in -->
+                        <button class="btn btn-primary btn-lg w-100 text-light" id="btn-login" type="submit">Sign-in</button>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+<!-- Scripts -->
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/core/auth.js') }}"></script>
+{% endblock %}
